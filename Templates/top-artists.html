@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/top-display.css') }}">
+    <script>
+        // Hide body until CSS is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Top 4 Weeks -->
+        <div class="grid-item-1" id="top-week-content">
+            <h2>4 Weeks</h2>
+            <div id='top-week-artist' class="content-list"></div>
+        </div>
+
+        <!-- Top 6 Months -->
+        <div class="grid-item-2" id="top-month-content">
+            <h2>6 Months</h2>
+            <div id="top-month-artist" class="content-list"></div>
+        </div>
+
+        <!-- Top 1 Year -->
+        <div class="grid-item-3" id="top-year-content">
+            <h2>1 Year</h2>
+            <div id="top-year-artist" class="content-list">
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

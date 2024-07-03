@@ -1,0 +1,182 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+    grid-template-rows: 1fr 1fr 1fr; /* Three rows */
+    gap: 10px;
+    background-color: #2d2d2d; /* Background color */
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Grid items */
+.grid-item-1 {
+    grid-row: 1 / 4; /* Span across 3 rows */
+    grid-column: 1 / 2; /* First column */
+    background-color: #f4f4f4; /* Background color */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-2 {
+    grid-row: 1 / 2; /* First row */
+    grid-column: 2 / 4; /* Span across columns 2 and 3 */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-3 {
+    grid-row: 2 / 4; /* Span rows 2 and 3 */
+    grid-column: 2 / 3; /* Second column */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-4 {
+    grid-row: 2 / 4; /* Span rows 2 and 3 */
+    grid-column: 3 / 4; /* Third column */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+h2 {
+    padding: 10px;
+    margin-top: 0;
+}
+
+/* Content list with scrolling */
+.content-list {
+    flex: 1; /* Allow it to expand */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 100px); /* Adjust based on layout */
+}
+
+/* Song and playlist items */
+.song, .playlist {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Shadow */
+    border: 1px solid #2d2d2d; /* Border */
+}
+
+.song img, .playlist img {
+    width: 50px; /* Image width */
+    height: 50px; /* Image height */
+    margin-right: 10px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Song details */
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-size: 1.2em; /* Title font size */
+    font-weight: bold;
+}
+
+.song-artist {
+    font-size: 1em; /* Artist font size */
+    color: #555; /* Text color */
+}
+
+/* Top artists section */
+#top-artists-section {
+    padding: 10px;
+    background-color: #f8f8f8; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    height: 300px; /* Fixed height */
+    overflow-x: auto; /* Hide horizontal overflow */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Flexbox for top artists */
+#top-artists {
+    display: flex;
+    flex-direction: row;
+    gap: 5px; /* Gap between items */
+}
+
+/* Individual artist item */
+.artist {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    flex: 0 0 auto; /* Fixed size */
+    width: 150px; /* Width */
+    margin: 5px;
+    padding: 10px;
+    background-color: white; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+.artist-rank {
+    display: none;
+}
+
+.artist img {
+    width: 120px; /* Image size */
+    height: 120px; /* Ensure square image */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.artist-details {
+    text-align: center; /* Center text */
+    margin-top: 10px; /* Spacing */
+}
+
+.artist-name {
+    font-size: 16px; /* Font size */
+    font-weight: bold;
+}
+
+/* Personal Info */
+#profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}

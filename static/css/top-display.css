@@ -1,0 +1,108 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.h2 {
+    align-items: center;
+    padding: 10px;
+    margin-top: 0;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+    grid-template-rows: 1fr 1fr 1fr; /* Three rows */
+    gap: 10px;
+    background-color: #2d2d2d; /* Background color */
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Grid items */
+.grid-item-1 {
+    grid-row: 1 / 4; /* Span across 3 rows */
+    grid-column: 1 / 2; /* First column */
+    background-color: #f4f4f4; /* Background color */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-2 {
+    grid-row: 1 / 4; /* First row */
+    grid-column: 2 / 3; /* Span across columns 2 and 3 */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-3 {
+    grid-row: 1 / 4; /* Span rows 2 and 3 */
+    grid-column: 3 / 4; /* Second column */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content list with scrolling */
+.content-list {
+    flex: 1; /* Allow it to expand */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 100px); /* Adjust based on layout */
+}
+
+/* Song and playlist items */
+.artist, .song {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Shadow */
+    border: 1px solid #2d2d2d; /* Border */
+}
+
+.artist-rank, .song-rank {
+    font-size: 1.2em; /* Rank font size */
+    font-weight: bold;
+    margin-right: 10px; /* Spacing between rank and image */
+}
+
+.artist img, .song img {
+    width: 50px; /* Image width */
+    height: 50px; /* Image height */
+    margin-right: 10px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Song and artist details */
+.artist-details, .song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-name, .song-title {
+    font-size: 1.2em; /* Title font size */
+    font-weight: bold;
+}
+
+.song-artist, .song-artist {
+    font-size: 1em; /* Artist font size */
+    color: #555; /* Text color */
+}

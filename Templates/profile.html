@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile.css') }}">
+    <script>
+        // Hide body until CSS is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Empty top-left part -->
+        <div class="grid-item-1">
+            <h2>Profile</h2>
+            <div id="profile-picture" class="content-list"></div>
+            <div id="profile-name" class="content-list"></div>
+        </div>
+
+        <!-- Top-right part for top artists -->
+        <div class="grid-item-2" id="top-artists-section">
+            <h2>Top Arists</h2>
+            <div id="top-artists" class="content-list">
+            </div>
+        </div>
+
+        <!-- Middle part for recently played -->
+        <div class="grid-item-3" id="recently-played-section">
+            <h2>Recently Played</h2>
+            <div id="recently-played" class="content-list">
+            </div>
+        </div>
+
+        <!-- Bottom-right part for playlist songs -->
+        <div class="grid-item-4" id="playlist-songs-section">
+            <h2>New Music</h2>
+            <div id="playlist-songs" class="content-list">
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
